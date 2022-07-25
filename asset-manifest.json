@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/dutycomplete-frontend/static/css/main.cf01e9fa.css",
+    "main.js": "/dutycomplete-frontend/static/js/main.baebb074.js",
+    "static/js/787.5e641a73.chunk.js": "/dutycomplete-frontend/static/js/787.5e641a73.chunk.js",
+    "index.html": "/dutycomplete-frontend/index.html",
+    "main.cf01e9fa.css.map": "/dutycomplete-frontend/static/css/main.cf01e9fa.css.map",
+    "main.baebb074.js.map": "/dutycomplete-frontend/static/js/main.baebb074.js.map",
+    "787.5e641a73.chunk.js.map": "/dutycomplete-frontend/static/js/787.5e641a73.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.cf01e9fa.css",
+    "static/js/main.baebb074.js"
+  ]
+}
