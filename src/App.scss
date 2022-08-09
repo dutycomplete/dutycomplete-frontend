@@ -1,0 +1,140 @@
+$category-border-width: 3px;
+$category-border: $category-border-width solid gold;
+
+$duties-background-color: darkslateblue;
+
+.App {
+  background-color: #282c34;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.clamp-container {
+  width: 100%;
+}
+
+.clamp-content {
+  margin: auto;
+  max-width: 600px;
+}
+
+#header-content {
+  font-size: calc(10px + 2vmin);
+  text-align: center;
+}
+
+#categories {
+  display: flex;
+}
+
+#categories-content {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+}
+
+.categories-margin {
+  flex: auto;
+  border-bottom: $category-border;
+}
+
+.categories-tab {
+  background-color: inherit;
+  color: inherit;
+  border: $category-border;
+  border-radius: 10px 10px 0px 0px;
+  font-size: medium;
+  margin: 0px -1px;
+  padding: 5px 10px 3px;
+}
+
+.categories-tab-active {
+  background-color: $duties-background-color;
+  border-bottom: $category-border-width solid $duties-background-color;
+}
+
+#duties {
+  background-color: $duties-background-color;
+  flex: auto;
+  overflow: auto;
+
+  border-bottom: $category-border;
+}
+
+#duties-content {
+  overflow: auto;
+}
+
+.duty {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+
+  margin: 5px;
+  border-radius: 8px;
+}
+
+.duty-incomplete {
+  background-image: linear-gradient(to right, red 25%, #00000000);
+}
+
+.duty-unsynced {
+  background-image: linear-gradient(to right, yellow 25%, #00000000);
+}
+
+.duty-synced {
+  background-image: linear-gradient(to right, green 25%, #00000000);
+}
+
+.duty-complete {
+  background-image: linear-gradient(to right, magenta 25%, #00000000);
+}
+
+.duty-icon {
+  grid-row: span 2;
+  grid-column: 1;
+
+  margin: 0px;
+  margin-right: 5px;
+  width: 250px;
+  border-radius: 8px 0px 0px 8px;
+  background-color: black;
+}
+
+.duty-name {
+  grid-row: 1;
+  grid-column: 2;
+  margin: 0px;
+}
+
+.duty-status-container {
+  grid-row: 2;
+  grid-column: 2;
+
+  margin-right: 10px;
+  display: grid;
+  grid-auto-columns: 1fr;
+}
+
+.duty-status-button {
+
+}
+
+.duty-status-button-selected {
+  background-color: gold;
+}
+
+#footer-content {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+
+  margin: 10px auto;
+
+  img {
+    height: 20px;
+  }
+}

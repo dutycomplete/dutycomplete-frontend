@@ -5,6 +5,7 @@ const prevDutyStatusesItem = localStorage.getItem("dutystatuses");
 const prevDutyStatuses = prevDutyStatusesItem ? JSON.parse(prevDutyStatusesItem) : [];
 
 function Duties(props) {
+
     const [dutyStatuses, setDutyStatuses] = useState(prevDutyStatuses);
 
     const setDutyStatus = function (id, status) {
@@ -18,12 +19,17 @@ function Duties(props) {
     const dutyElements = props.info.map(dutyInfo => {
         const dutyStatus = dutyStatuses.find(dutyStatus => dutyStatus.id === dutyInfo.id);
         const status = dutyStatus ? dutyStatus.status : 0;
-        return <Duty key={dutyInfo.id} info={dutyInfo} status={status} setStatus={setDutyStatus} />
+
+        return (
+            <Duty key={dutyInfo.id} info={dutyInfo} status={status} setStatus={status => setDutyStatus(dutyInfo.id, status)} />
+        );
     });
 
     return (
         <div id="duties">
-            {dutyElements}
+            <div id="duties-content" className="clamp-content">
+                {dutyElements}
+            </div>
         </div>
     );
 }
