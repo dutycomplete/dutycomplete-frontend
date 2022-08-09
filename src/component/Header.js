@@ -1,9 +1,11 @@
+import title from "../img/title.png"
+
 function Header() {
 
     return (
         <header>
             <div id="header-content" className="clamp-content">
-                <h1>Duty Complete</h1>
+                <img src={title} alt="Duty Complete logo" />
             </div>
         </header>
     );
