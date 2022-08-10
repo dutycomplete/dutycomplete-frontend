@@ -5,7 +5,7 @@ import Filters from './Filters';
 
 function Content() {
 
-    const [activeCategory, setActiveCategory] = useState(0);
+    const [activeCategory, setActiveCategory] = useState(2);
 
     const [dutyData, setDutyData] = useState([]);
 
